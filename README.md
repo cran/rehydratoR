@@ -8,7 +8,7 @@ The output of the package are the tweets downloaded as a [tibble](https://CRAN.R
 
 This package limits the rate of tweet downloading so Twitter's 90,000 tweet/15 minute limit is not exceeded. If you choose to download the tweets to JSON files, then a new JSON file will be created for every 90,000 tweet ID numbers.
 
-Tweets that have been delete or made private cannot be downloaded.
+Tweets that have been deleted or made private cannot be downloaded.
 
 ## Getting Started
 
@@ -25,6 +25,12 @@ Users must acquire a *consumer key*, *consumer secret*, *access token*, and *acc
 kevincoakley, with zacharyst sending annoying e-mails.
 
 ## Version History
+
+0.5.2
+
+* Added a parameter called group_start that takes the list of split tweet IDs and keeps only those from group_start to the final list. That way, if a download is interrupted, which is likely for large corpuses, the user can restart the download at the group_start chunk, not from the beginning.
+
+* Added a line to print an estimate of how long a download will take
 
 0.5.1
 
